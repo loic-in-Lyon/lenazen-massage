@@ -181,6 +181,12 @@ header {
   flex-direction: row;
   gap: 32px;
 }
+.card-wrapper.services {
+  display: grid;
+  grid-template-columns: repeat(3, 312px);
+  gap: 32px;
+  justify-content: center;
+}
 
 #contact {
   .container {
@@ -272,46 +278,9 @@ header {
   align-items: flex-start;
 }
 
-/* Info banner */
-.info-banner {
-  background-color: #f8f3f0;
-  /* couleur douce beige/zen */
-  color: #5a4a42;
-  position: relative;
+.info-banner{
   text-align: center;
-  padding: 12px 16px;
-  font-size: 14px;
-
-  strong {
-    font-weight: 500;
-  }
-
-  a,
-  button {
-    color: #8c6f61;
-    text-decoration: underline;
-    margin-left: 6px;
-    scroll-behavior: smooth;
-
-  }
-
-  button {
-    background-color: transparent;
-    border: none;
-    text-underline-offset: 2px;
-    font-weight: 400;
-    letter-spacing: .05em;
-  }
-
-  a:hover {
-    opacity: 0.7;
-  }
-
-  p {
-    margin: 0;
-    z-index: 6;
-    position: relative;
-  }
+  padding: 1rem 24px 0;
 }
 
 .info-banner::before {
@@ -320,6 +289,40 @@ header {
   inset: 0;
   background: radial-gradient(circle at 30% 50%, rgb(224 172 147), transparent 60%);
   animation: softGlow 4s ease-in-out infinite;
+}
+
+/* event section */
+.event-banner-full {
+  background-color: #a85842; /* Ton terracotta du site */
+  color: #ffffff;
+  text-align: center;
+  padding: 50px 20px;
+  margin: 60px 0;
+}
+
+.event-banner-full h3 {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+}
+
+.event-banner-full p {
+  font-size: 1.05rem;
+  opacity: 0.95;
+  font-weight: 300;
+}
+
+.container-event h3 {
+  font-family: 'Syne', sans-serif; /* Ta police de titre */
+  color: #a85842;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.container-event p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
 }
 
 /* Lightbox */
@@ -577,9 +580,35 @@ nav {
   .card:hover::after {
     opacity: 0.17;
   }
-
+  .badge-nouveau {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    
+    /* Utilisation des teintes inspirées du design (Terracotta doux) */
+    background: rgba(168, 88, 66, 0.12);
+    color: #a85842;
+    border: 1px solid rgba(168, 88, 66, 0.25);
+    
+    /* Typographie et espacement chic */
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    
+    /* Forme pilule douce */
+    padding: 5px 12px;
+    border-radius: 20px;
+    
+    /* Pour qu'il reste bien au-dessus des éléments graphiques de fond */
+    z-index: 2;
+  }
   .highlight {
     z-index: 0;
+    width: 100%;
+    max-width: 1000px;
+  background: #fbf3ec; /* Un fond légèrement teinté pour l'isoler subtilement */
   }
 
   /* halo dégradé */
